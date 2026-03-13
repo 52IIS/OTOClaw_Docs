@@ -17,21 +17,21 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'OTOClaw一键龙虾 - 点一下，装好整套龙虾AI' }],
     ['meta', { property: 'og:description', content: 'OTOClaw一键龙虾 - OpenClaw一键安装整合包，基于Tauri 2.0 + Vue 3 + TypeScript + Rust构建的跨平台AI助手管理工具' }],
-    ['meta', { property: 'og:image', content: 'https://otoclaw.com/logo.png' }],
-    ['meta', { property: 'og:url', content: 'https://otoclaw.com' }],
+    ['meta', { property: 'og:image', content: 'https://www.otoclaw.com/logo.png' }],
+    ['meta', { property: 'og:url', content: 'https://www.otoclaw.com' }],
     ['meta', { property: 'og:site_name', content: 'OTOClaw一键龙虾' }],
     ['meta', { property: 'og:locale', content: 'zh_CN' }],
     
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'OTOClaw一键龙虾 - 点一下，装好整套龙虾AI' }],
     ['meta', { name: 'twitter:description', content: 'OTOClaw一键龙虾 - OpenClaw一键安装整合包，基于Tauri 2.0 + Vue 3 + TypeScript + Rust构建的跨平台AI助手管理工具' }],
-    ['meta', { name: 'twitter:image', content: 'https://otoclaw.com/logo.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://www.otoclaw.com/logo.png' }],
     ['meta', { name: 'twitter:site', content: '@OTOClaw' }],
     ['meta', { name: 'twitter:creator', content: '@OTOClaw' }],
     
     ['meta', { name: 'wechat:title', content: 'OTOClaw一键龙虾' }],
     ['meta', { name: 'wechat:description', content: 'OpenClaw一键安装整合包，基于Tauri 2.0 + Vue 3 + TypeScript + Rust构建的跨平台AI助手管理工具' }],
-    ['meta', { name: 'wechat:image', content: 'https://otoclaw.com/logo.png' }],
+    ['meta', { name: 'wechat:image', content: 'https://www.otoclaw.com/logo.png' }],
   ],
 
   themeConfig: {
@@ -90,7 +90,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 MIT 许可证发布 | Made with ❤️ by OTOClaw Team',
+      message: '<a href="/sitemap.xml" target="_blank">网站地图</a> | <a href="/robots.txt" target="_blank">Robots</a> | 基于 MIT 许可证发布 | Made with ❤️ by OTOClaw Team',
       copyright: `Copyright © ${new Date().getFullYear()} OTOClaw Team`
     },
 

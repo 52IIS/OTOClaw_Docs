@@ -93,7 +93,7 @@ otoclaw/
 
 ## 🔗 相关链接
 
-- **OTOClaw 官网**: [otoclaw.com](https://otoclaw.com) - 下载服务、教程文档、社区交流
+- **OTOClaw 官网**: [otoclaw.com](https://www.otoclaw.com) - 下载服务、教程文档、社区交流
 - **原项目**: [OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager) ⭐ 1.2k - 图形界面版本（React）
 - **命令行版本**: [OpenClawInstaller](https://github.com/miaoxworld/OpenClawInstaller)
 - **Tauri 官方文档**: [tauri.app](https://tauri.app/)

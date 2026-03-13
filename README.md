@@ -92,7 +92,7 @@ OTOClaw_Docs/
 
 ## 🔗 相关链接
 
-- **OTOClaw 官网**: [otoclaw.com](https://otoclaw.com)
+- **OTOClaw 官网**: [otoclaw.com](https://www.otoclaw.com)
 - **OTOClaw 主仓库**: [github.com/52IIS/OTOClaw](https://github.com/52IIS/OTOClaw)
 - **原项目**: [OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager) ⭐ 1.2k
 
