@@ -198,16 +198,20 @@ $env:HTTPS_PROXY = "http://127.0.0.1:7890"
 
 **A:** 在配置文件中添加多个渠道：
 
-```yaml
-channels:
-  telegram:
-    enabled: true
-    bot_token: "xxx"
-  
-  feishu:
-    enabled: true
-    app_id: "xxx"
-    app_secret: "xxx"
+```json5
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "bot_token": "xxx",
+    },
+    "feishu": {
+      "enabled": true,
+      "app_id": "xxx",
+      "app_secret": "xxx",
+    }
+  }
+}
 ```
 
 ## 🔧 开发问题
@@ -255,9 +259,9 @@ npm run tauri:build
 
 | 平台 | 路径 |
 |------|------|
-| macOS | `~/.openclaw/config.yaml` |
-| Windows | `%USERPROFILE%\.openclaw\config.yaml` |
-| Linux | `~/.openclaw/config.yaml` |
+| macOS | `~/.openclaw/openclaw.json` |
+| Windows | `%USERPROFILE%\.openclaw\openclaw.json` |
+| Linux | `~/.openclaw/openclaw.json` |
 
 ### Q: 如何重置配置？
 
@@ -265,10 +269,10 @@ npm run tauri:build
 
 ```bash
 # macOS/Linux
-rm ~/.openclaw/config.yaml
+rm ~/.openclaw/openclaw.json
 
 # Windows
-del %USERPROFILE%\.openclaw\config.yaml
+del %USERPROFILE%\.openclaw\openclaw.json
 ```
 
 ### Q: 环境变量如何配置？

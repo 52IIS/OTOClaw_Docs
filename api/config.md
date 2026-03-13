@@ -1,6 +1,6 @@
 # 配置 API
 
-本章节详细介绍 OTOClaw 的配置系统。
+本章节详细介绍 OpenClaw 的配置系统。
 
 ## 配置文件
 
@@ -8,50 +8,63 @@
 
 | 平台 | 路径 |
 |------|------|
-| macOS | `~/.openclaw/config.yaml` |
-| Windows | `%USERPROFILE%\.openclaw\config.yaml` |
-| Linux | `~/.openclaw/config.yaml` |
+| macOS | `~/.openclaw/openclaw.json` |
+| Windows | `%USERPROFILE%\.openclaw\openclaw.json` |
+| Linux | `~/.openclaw/openclaw.json` |
 
 ### 配置文件格式
 
-配置文件使用 YAML 格式：
+配置文件使用 JSON5 格式，支持注释和尾随逗号：
 
-```yaml
-# 服务配置
-server:
-  port: 8080
-  host: "0.0.0.0"
+```json5
+{
+  // 服务配置
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0",
+  },
 
-# AI 配置
-ai:
-  default_provider: "anthropic"
-  providers:
-    - name: "anthropic"
-      api_key: "${ANTHROPIC_API_KEY}"
-      model: "claude-3-opus"
+  // AI 配置
+  "ai": {
+    "default_provider": "anthropic",
+    "providers": [
+      {
+        "name": "anthropic",
+        "api_key": "${ANTHROPIC_API_KEY}",
+        "model": "claude-3-opus",
+      }
+    ],
+  },
 
-# 消息渠道
-channels:
-  telegram:
-    enabled: true
-    bot_token: "${TELEGRAM_BOT_TOKEN}"
+  // 消息渠道
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "bot_token": "${TELEGRAM_BOT_TOKEN}",
+    }
+  },
 
-# 日志配置
-logging:
-  level: "info"
-  file: "~/.openclaw/logs/otoclaw.log"
+  // 日志配置
+  "logging": {
+    "level": "info",
+    "file": "~/.openclaw/logs/otoclaw.log",
+  },
+}
 ```
 
 ## 服务配置
 
 ### server
 
-```yaml
-server:
-  port: 8080                    # 服务端口
-  host: "0.0.0.0"              # 监听地址
-  workers: 4                    # 工作进程数
-  timeout: 30                   # 请求超时（秒）
+```json5
+{
+  "server": {
+    "port": 8080,              // 服务端口
+    "host": "0.0.0.0",         // 监听地址
+    "workers": 4,              // 工作进程数
+    "timeout": 30,             // 请求超时（秒）
+  }
+}
 ```
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -65,20 +78,27 @@ server:
 
 ### ai
 
-```yaml
-ai:
-  default_provider: "anthropic"
-  providers:
-    - name: "anthropic"
-      api_key: "${ANTHROPIC_API_KEY}"
-      api_endpoint: "https://api.anthropic.com"
-      model: "claude-3-opus"
-      max_tokens: 4096
-      temperature: 0.7
-    
-    - name: "openai"
-      api_key: "${OPENAI_API_KEY}"
-      model: "gpt-4-turbo"
+```json5
+{
+  "ai": {
+    "default_provider": "anthropic",
+    "providers": [
+      {
+        "name": "anthropic",
+        "api_key": "${ANTHROPIC_API_KEY}",
+        "api_endpoint": "https://api.anthropic.com",
+        "model": "claude-3-opus",
+        "max_tokens": 4096,
+        "temperature": 0.7,
+      },
+      {
+        "name": "openai",
+        "api_key": "${OPENAI_API_KEY}",
+        "model": "gpt-4-turbo",
+      }
+    ],
+  }
+}
 ```
 
 ### AI 提供商配置
@@ -108,15 +128,17 @@ ai:
 
 ### Telegram
 
-```yaml
-channels:
-  telegram:
-    enabled: true
-    bot_token: "${TELEGRAM_BOT_TOKEN}"
-    allowed_updates:
-      - message
-      - edited_message
-    webhook_url: ""             # 留空使用轮询
+```json5
+{
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "bot_token": "${TELEGRAM_BOT_TOKEN}",
+      "allowed_updates": ["message", "edited_message"],
+      "webhook_url": "",           // 留空使用轮询
+    }
+  }
+}
 ```
 
 | 参数 | 类型 | 必填 | 说明 |
@@ -128,15 +150,19 @@ channels:
 
 ### 飞书
 
-```yaml
-channels:
-  feishu:
-    enabled: true
-    app_id: "${FEISHU_APP_ID}"
-    app_secret: "${FEISHU_APP_SECRET}"
-    encrypt_key: "${FEISHU_ENCRYPT_KEY}"
-    verification_token: "${FEISHU_VERIFICATION_TOKEN}"
-    region: "cn"                # cn / us / sg
+```json5
+{
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "app_id": "${FEISHU_APP_ID}",
+      "app_secret": "${FEISHU_APP_SECRET}",
+      "encrypt_key": "${FEISHU_ENCRYPT_KEY}",
+      "verification_token": "${FEISHU_VERIFICATION_TOKEN}",
+      "region": "cn",              // cn / us / sg
+    }
+  }
+}
 ```
 
 | 参数 | 类型 | 必填 | 说明 |
@@ -149,42 +175,52 @@ channels:
 
 ### Discord
 
-```yaml
-channels:
-  discord:
-    enabled: true
-    bot_token: "${DISCORD_BOT_TOKEN}"
-    application_id: "${DISCORD_APP_ID}"
-    public_key: "${DISCORD_PUBLIC_KEY}"
+```json5
+{
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "bot_token": "${DISCORD_BOT_TOKEN}",
+      "application_id": "${DISCORD_APP_ID}",
+      "public_key": "${DISCORD_PUBLIC_KEY}",
+    }
+  }
+}
 ```
 
 ### Slack
 
-```yaml
-channels:
-  slack:
-    enabled: true
-    bot_token: "${SLACK_BOT_TOKEN}"
-    app_token: "${SLACK_APP_TOKEN}"
-    signing_secret: "${SLACK_SIGNING_SECRET}"
+```json5
+{
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "bot_token": "${SLACK_BOT_TOKEN}",
+      "app_token": "${SLACK_APP_TOKEN}",
+      "signing_secret": "${SLACK_SIGNING_SECRET}",
+    }
+  }
+}
 ```
 
 ## 日志配置
 
 ### logging
 
-```yaml
-logging:
-  level: "info"                 # debug / info / warn / error
-  format: "text"                # text / json
-  output:
-    - console
-    - file
-  file:
-    path: "~/.openclaw/logs/otoclaw.log"
-    max_size: "10MB"
-    max_files: 5
-    compress: true
+```json5
+{
+  "logging": {
+    "level": "info",              // debug / info / warn / error
+    "format": "text",             // text / json
+    "output": ["console", "file"],
+    "file": {
+      "path": "~/.openclaw/logs/otoclaw.log",
+      "max_size": "10MB",
+      "max_files": 5,
+      "compress": true,
+    },
+  }
+}
 ```
 
 | 参数 | 类型 | 默认值 | 说明 |
@@ -201,11 +237,17 @@ logging:
 
 配置支持环境变量替换：
 
-```yaml
-ai:
-  providers:
-    - name: "anthropic"
-      api_key: "${ANTHROPIC_API_KEY}"
+```json5
+{
+  "ai": {
+    "providers": [
+      {
+        "name": "anthropic",
+        "api_key": "${ANTHROPIC_API_KEY}",
+      }
+    ],
+  }
+}
 ```
 
 ### 环境变量文件

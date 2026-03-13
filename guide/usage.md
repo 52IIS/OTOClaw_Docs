@@ -86,12 +86,13 @@
 2. 获取 Bot Token
 3. 在 OTOClaw 中配置：
 
-```yaml
-telegram:
-  bot_token: "YOUR_BOT_TOKEN"
-  allowed_updates:
-    - message
-    - edited_message
+```json5
+{
+  "telegram": {
+    "bot_token": "YOUR_BOT_TOKEN",
+    "allowed_updates": ["message", "edited_message"],
+  }
+}
 ```
 
 ### 飞书机器人
@@ -101,11 +102,14 @@ telegram:
 3. 配置事件订阅
 4. 在 OTOClaw 中配置：
 
-```yaml
-feishu:
-  app_id: "YOUR_APP_ID"
-  app_secret: "YOUR_APP_SECRET"
-  encrypt_key: "YOUR_ENCRYPT_KEY"
+```json5
+{
+  "feishu": {
+    "app_id": "YOUR_APP_ID",
+    "app_secret": "YOUR_APP_SECRET",
+    "encrypt_key": "YOUR_ENCRYPT_KEY",
+  }
+}
 ```
 
 ### Discord Bot
@@ -115,10 +119,13 @@ feishu:
 3. 配置 OAuth2 重定向
 4. 在 OTOClaw 中配置：
 
-```yaml
-discord:
-  bot_token: "YOUR_BOT_TOKEN"
-  application_id: "YOUR_APPLICATION_ID"
+```json5
+{
+  "discord": {
+    "bot_token": "YOUR_BOT_TOKEN",
+    "application_id": "YOUR_APPLICATION_ID",
+  }
+}
 ```
 
 ### 更多渠道
@@ -274,41 +281,51 @@ npm run tauri:build
 
 ### 配置文件位置
 
-- **macOS**: `~/.openclaw/config.yaml`
-- **Windows**: `%USERPROFILE%\.openclaw\config.yaml`
-- **Linux**: `~/.openclaw/config.yaml`
+- **macOS**: `~/.openclaw/openclaw.json`
+- **Windows**: `%USERPROFILE%\.openclaw\openclaw.json`
+- **Linux**: `~/.openclaw/openclaw.json`
 
 ### 配置示例
 
-```yaml
-# 服务配置
-server:
-  port: 8080
-  host: "0.0.0.0"
+```json5
+{
+  // 服务配置
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0",
+  },
 
-# AI 配置
-ai:
-  default_provider: "anthropic"
-  providers:
-    - name: "anthropic"
-      api_key: "YOUR_API_KEY"
-      model: "claude-3-opus"
+  // AI 配置
+  "ai": {
+    "default_provider": "anthropic",
+    "providers": [
+      {
+        "name": "anthropic",
+        "api_key": "YOUR_API_KEY",
+        "model": "claude-3-opus",
+      }
+    ],
+  },
 
-# 消息渠道
-channels:
-  telegram:
-    enabled: true
-    bot_token: "YOUR_BOT_TOKEN"
-  
-  feishu:
-    enabled: false
-    app_id: ""
-    app_secret: ""
+  // 消息渠道
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "bot_token": "YOUR_BOT_TOKEN",
+    },
+    "feishu": {
+      "enabled": false,
+      "app_id": "",
+      "app_secret": "",
+    }
+  },
 
-# 日志配置
-logging:
-  level: "info"
-  file: "~/.openclaw/logs/otoclaw.log"
+  // 日志配置
+  "logging": {
+    "level": "info",
+    "file": "~/.openclaw/logs/otoclaw.log",
+  },
+}
 ```
 
 ---
