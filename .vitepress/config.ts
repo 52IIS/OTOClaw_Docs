@@ -44,7 +44,13 @@ export default defineConfig({
       { text: '功能特性', link: '/guide/features' },
       { text: 'API参考', link: '/api/' },
       { text: '下载', link: '/downloads' },
-      { text: '常见问题', link: '/faq/' },
+      {
+        text: '帮助',
+        items: [
+          { text: '常见问题', link: '/faq/' },
+          { text: '关于我们', link: '/about/' }
+        ]
+      },
       {
         text: 'GitHub',
         link: 'https://github.com/52IIS/OTOClaw',
@@ -80,6 +86,14 @@ export default defineConfig({
           text: '帮助',
           items: [
             { text: '常见问题', link: '/faq/' },
+          ]
+        }
+      ],
+      '/about/': [
+        {
+          text: '关于',
+          items: [
+            { text: '关于我们', link: '/about/' },
           ]
         }
       ]

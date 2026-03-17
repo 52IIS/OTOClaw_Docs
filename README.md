@@ -96,6 +96,19 @@ OTOClaw_Docs/
 - **OTOClaw 主仓库**: [github.com/52IIS/OTOClaw](https://github.com/52IIS/OTOClaw)
 - **原项目**: [OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager) ⭐ 1.2k
 
+## 💬 联系我们
+
+### QQ 群
+
+- **群名称**：OTOClaw 用户交流群
+- **群号码**：2992878507
+- **管理员 QQ**：2992878507
+
+### 微信
+
+- **群名称**：OTOClaw 官方交流群
+- **管理员微信**：IIS52COM
+
 ---
 
 <div align="center">
