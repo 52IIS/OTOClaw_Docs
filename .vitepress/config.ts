@@ -43,7 +43,7 @@ export default defineConfig({
       { text: '指南', link: '/guide/' },
       { text: '功能特性', link: '/guide/features' },
       { text: 'API参考', link: '/api/' },
-      { text: '下载', link: '/downloads' },
+      { text: '下载', link: '/downloads/' },
       {
         text: '帮助',
         items: [
@@ -94,6 +94,14 @@ export default defineConfig({
           text: '关于',
           items: [
             { text: '关于我们', link: '/about/' },
+          ]
+        }
+      ],
+      '/downloads/': [
+        {
+          text: '下载',
+          items: [
+            { text: '下载应用', link: '/downloads/' },
           ]
         }
       ]

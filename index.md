@@ -16,7 +16,10 @@ hero:
       link: /guide/
     - theme: alt
       text: 下载应用
-      link: /downloads
+      link: /downloads/
+    - theme: alt
+      text: 联系我们
+      link: /about/#问题反馈渠道
     - theme: alt
       text: GitHub
       link: https://github.com/52IIS/OTOClaw

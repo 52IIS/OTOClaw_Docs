@@ -6,7 +6,7 @@
 
 ### 方式一：直接下载（推荐）
 
-访问 [OTOClaw 下载页面](/downloads) 或 [GitHub Releases](https://github.com/52IIS/OTOClaw/releases) 下载对应平台的安装包。
+访问 [OTOClaw 下载页面](/downloads/) 或 [GitHub Releases](https://github.com/52IIS/OTOClaw/releases) 下载对应平台的安装包。
 
 | 平台 | 文件格式 | 说明 |
 |------|----------|------|
