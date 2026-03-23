@@ -14,9 +14,7 @@
 
 ## 📖 项目背景
 
-本项目基于 GitHub 开源项目 **[OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager)** 进行二次开发（原项目已获得 ⭐ 1.2k Star）。
-
-开发目的是将原项目的 **React 技术栈迁移至 Vue 3 技术栈**，同时作为个人技术学习实践。在保持原有功能完整性的基础上，探索 Vue 3 Composition API、Pinia 状态管理等现代 Vue 生态的最佳实践。
+项目在设计之初参考了 OpenClaw Manager 的产品思路，但现已发展为独立架构：采用 Rust 原生后端实现高性能系统调用，前端使用 Vue 3 Composition API + Pinia 状态管理打造现代化响应式 UI，并扩展了智能体管理、内置聊天界面、技能系统等创新功能。
 
 ## 🛠️ 技术栈
 
@@ -94,7 +92,7 @@ otoclaw/
 ## 🔗 相关链接
 
 - **OTOClaw 官网**: [otoclaw.com](https://www.otoclaw.com) - 下载服务、教程文档、社区交流
-- **原项目**: [OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager) ⭐ 1.2k - 图形界面版本（React）
+- **参考项目**: [OpenClaw Manager](https://github.com/miaoxworld/openclaw-manager) - 图形界面版本（React）
 - **命令行版本**: [OpenClawInstaller](https://github.com/miaoxworld/OpenClawInstaller)
 - **Tauri 官方文档**: [tauri.app](https://tauri.app/)
 - **Vue 3 官方文档**: [vuejs.org](https://vuejs.org/)
