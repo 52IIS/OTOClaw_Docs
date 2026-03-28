@@ -18,7 +18,7 @@
 
 | 文件 | 架构 | 说明 |
 |------|------|------|
-| <a href="/download/OTOClaw_1.0.5_universal.dmg" download>OTOClaw_1.0.5_universal.dmg</a> | Universal | 支持 Intel 和 Apple Silicon (M1/M2/M3) |
+| <a href="/download/OTOClaw_1.0.8_universal.dmg" download>OTOClaw_1.0.8_universal.dmg</a> | Universal | 支持 Intel 和 Apple Silicon (M1/M2/M3) |
 
 </div>
 
@@ -36,8 +36,8 @@
 
 | 文件 | 架构 | 说明 |
 |------|------|------|
-| <a href="/download/OTOClaw_1.0.5_x64-setup.exe" download>OTOClaw_1.0.5_x64-setup.exe</a> | x64 | 安装程序（推荐） |
-| <a href="/download/OTOClaw_1.0.5_x64_en-US.msi" download>OTOClaw_1.0.5_x64_en-US.msi</a> | x64 | MSI 安装包 |
+| <a href="/download/OTOClaw_1.0.8_x64-setup.exe" download>OTOClaw_1.0.8_x64-setup.exe</a> | x64 | 安装程序（推荐） |
+| <a href="/download/OTOClaw_1.0.8_x64_en-US.msi" download>OTOClaw_1.0.8_x64_en-US.msi</a> | x64 | MSI 安装包 |
 
 </div>
 
@@ -53,8 +53,8 @@
 
 | 文件 | 格式 | 说明 |
 |------|------|------|
-| <a href="/download/OTOClaw_1.0.5_amd64.deb" download>OTOClaw_1.0.5_amd64.deb</a> | .deb | Ubuntu/Debian 安装包 |
-| <a href="/download/OTOClaw_1.0.5_amd64.AppImage" download>OTOClaw_1.0.5_amd64.AppImage</a> | .AppImage | 便携版，无需安装 |
+| <a href="/download/OTOClaw_1.0.8_amd64.deb" download>OTOClaw_1.0.8_amd64.deb</a> | .deb | Ubuntu/Debian 安装包 |
+| <a href="/download/OTOClaw_1.0.8_amd64.AppImage" download>OTOClaw_1.0.8_amd64.AppImage</a> | .AppImage | 便携版，无需安装 |
 
 </div>
 
@@ -62,14 +62,14 @@
 
 **DEB 包 (Ubuntu/Debian):**
 ```bash
-sudo dpkg -i OTOClaw_1.0.5_amd64.deb
+sudo dpkg -i OTOClaw_1.0.8_amd64.deb
 sudo apt-get install -f  # 安装依赖
 ```
 
 **AppImage (通用):**
 ```bash
-chmod +x OTOClaw_1.0.5_amd64.AppImage
-./OTOClaw_1.0.5_amd64.AppImage
+chmod +x OTOClaw_1.0.8_amd64.AppImage
+./OTOClaw_1.0.8_amd64.AppImage
 ```
 
 ## 📦 其他下载方式
@@ -104,7 +104,7 @@ Get-FileHash OTOClaw_*.exe -Algorithm SHA256
 ---
 
 <div style="text-align: center; margin-top: 48px;">
-  <p>当前版本：<strong>v1.0.5</strong></p>
+  <p>当前版本：<strong>v1.0.8</strong></p>
   <a href="/guide/installation" style="display: inline-block; padding: 12px 24px; background: var(--vp-c-brand-1); color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
     查看详细安装指南 →
   </a>
